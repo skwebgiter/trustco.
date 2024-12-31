@@ -4357,8 +4357,8 @@ fieldset:disabled .btn {
 }
 
 .nav {
-  --bs-nav-link-padding-x: 10rem;
-  --bs-nav-link-padding-y: 5rem;
+  --bs-nav-link-padding-x: 3rem;
+  --bs-nav-link-padding-y: 1.5rem;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-link-color);
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
@@ -4378,9 +4378,10 @@ fieldset:disabled .btn {
   color: var(--bs-nav-link-color);
   text-decoration: none;
   background: 0 0;
-  border-radius: 5em;
-  border: 0;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
+  border: 3px solid transparent;
+  transition: color .15s ease-in-out,  
+  border-bottom .15s ease-in-out,
+  border .15s ease-in-out
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -4391,8 +4392,7 @@ fieldset:disabled .btn {
 
 .nav-link:focus,
 .nav-link:hover {
-  color: #fff;
-  background-color: #043a53;
+  border-bottom: 3px solid var(--bs-nav-link-color);
 }
 
 .nav-link:focus-visible {
@@ -4587,9 +4587,7 @@ fieldset:disabled .btn {
 .navbar-nav .nav-link.show {
   color: var(--bs-navbar-active-color);
   font-weight: bolder;
-  &:hover{
-    color: var(--bs-light-bg-subtle);
-  }
+  border-bottom: 4px solid var(--bs-nav-link-color);
 }
 
 .navbar-nav .dropdown-menu {
